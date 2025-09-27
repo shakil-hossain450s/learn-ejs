@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="/" method="POST">
+            <label for="pLanguage">
+                <input type="text" name="pLanguage" id="pLanguage" placeholder="Programming Language">
+            </label>
+            <input type="submit" value="Add">
+        </form>
+        <ul>
+
+            <% if(pLanguages.length> 0){ %>
+              <% for(const language of pLanguages){ %>
+                   <li><%= language %></li>
+               <% } %>
+            <% } else { %>
+                <p>No Data Found</p>
+            <% } %>
+
+        </ul>
+    </main>
+    <footer>
+        <p>All rights reserved &copy; by Shakil Hossain</p>
+    </footer>
+</body>
+
+</html>
